@@ -6,15 +6,19 @@ public class MenorEMaiorValor {
         Scanner teclado = new Scanner(System.in);
         int quantidadeDesejada = teclado.nextInt();
         int contador = 0;
-        int menorValor = 1;
+        int menorValor = 0;
         int maiorValor = 0;
-
         int numeroDigitado = 0;
+
         while (contador < quantidadeDesejada){
             System.out.println("Digite um número: ");
             numeroDigitado = teclado.nextInt();
             contador++;
-            if (numeroDigitado < menorValor ){
+            if (contador == 1){
+                menorValor = numeroDigitado;
+                maiorValor = numeroDigitado;
+            }
+            if (numeroDigitado <= menorValor ){
                 menorValor = numeroDigitado;
             }
             if (numeroDigitado >= maiorValor){
